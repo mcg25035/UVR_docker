@@ -53,7 +53,7 @@ RUN sed -i 's/\r$//' /tmp/requirements.txt && \
     sed -i 's/.*playsound.*/playsound==1.2.2/' /tmp/requirements.txt
 
 # 7. 安裝 Python 套件
-RUN pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+RUN pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
 RUN pip install --no-cache-dir --prefer-binary -r /tmp/requirements.txt
 RUN pip install --no-cache-dir scikit-learn tqdm
 
